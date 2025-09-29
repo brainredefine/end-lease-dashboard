@@ -24,3 +24,7 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* Fix: forcer couleur des options du <select> */
+select option {
+  color: black; /* fond natif est blanc → texte noir lisible */
+}
