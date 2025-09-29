@@ -82,12 +82,18 @@ export async function GET(
 
   if (propertyIds.length === 0) return NextResponse.json([]);
 
-  const properties = await odooCall<any>(
-    "property.property",
-    "search_read",
-    [[["id", "in", propertyIds]]],
-    ["id", "sales_person_id"]
-  );
+type Property = {
+  id: number;
+  sales_person_id: [number, string] | number | null;
+};
+
+const properties = await odooCall<Property>(
+  "property.property",
+  "search_read",
+  [[["id", "in", propertyIds]]],
+  ["id", "sales_person_id"]
+);
+
 
   const propertyMap: Record<number, number | null> = {};
   for (const p of properties) {
