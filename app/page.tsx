@@ -30,7 +30,9 @@ export default function HomePage() {
             <select
               onChange={handleSelect}
               defaultValue=""
-              className="w-full rounded-xl border border-white/15 bg-white/10 px-3 py-2 text-white outline-none placeholder:text-zinc-300 focus:border-white/25"
+              className="w-full rounded-xl border border-white/15 
+                         bg-white text-black px-3 py-2 
+                         outline-none focus:border-white/25"
             >
               <option value="" disabled>
                 -- Select an AM --
