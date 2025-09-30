@@ -19,7 +19,7 @@ export default function HomePage() {
           Lease End Dashboard
         </h1>
         <p className="mt-3 text-zinc-400 text-center max-w-md">
-          Sélectionnez un Asset Manager pour voir ses leases finissant dans 6 mois
+          Please select an Asset Manager to see your coming ending leases.
         </p>
 
         <div className="mt-10 w-full max-w-sm">
@@ -33,7 +33,7 @@ export default function HomePage() {
               className="w-full rounded-xl border border-white/15 bg-white/10 px-3 py-2 text-white outline-none placeholder:text-zinc-300 focus:border-white/25"
             >
               <option value="" disabled>
-                -- Choisissez --
+                -- Select an AM --
               </option>
               {Object.entries(assetManagers).map(([id, am]) => (
                 <option key={id} value={id}>
