@@ -32,7 +32,9 @@ export default function HomePage() {
               defaultValue=""
               className="w-full rounded-xl border border-white/15 
                          bg-white text-black px-3 py-2 
-                         outline-none focus:border-white/25"
+                         outline-none shadow-sm
+                         focus:border-emerald-400 focus:ring-2 focus:ring-emerald-400/40 
+                         hover:bg-zinc-50 transition"
             >
               <option value="" disabled>
                 -- Select an AM --

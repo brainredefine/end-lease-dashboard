@@ -62,9 +62,9 @@ export async function GET(
 
   const now = new Date();
   const sixMonths = new Date();
-  sixMonths.setMonth(now.getMonth() + 6);
+  sixMonths.setMonth(now.getMonth() + 15);
 
-  // 1. Récupère tous les leases qui expirent dans <6 mois
+  // 1. Récupère tous les leases qui expirent dans <15 mois (psa changé le nom de la fonction mais ca prend bien 5)
   const tenancies = await odooCall<Lease>(
     "property.tenancy",
     "search_read",
